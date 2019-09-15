@@ -1,0 +1,47 @@
+#gallery-section {
+  background: rgba($primary, 0.1);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    padding-bottom: 7%;
+    background: rgba($primary, 0.1);
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+  }
+  header {
+    padding: $spacing-l $spacing-m;
+    h4,
+    h3 {
+      font-size: calculateRem(40px);
+      line-height: calculateRem(48px);
+      font-weight: 400;
+      text-align: center;
+      span {
+        font-family: "Playfair Display", serif;
+      }
+      @include bp-medium {
+        font-size: calculateRem(50px);
+        line-height: calculateRem(58px);
+      }
+    }
+  }
+}
+
+#gallery-container {
+  picture {
+    display: block;
+    width: 100%;
+    height: calculateRem(200px);
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+}

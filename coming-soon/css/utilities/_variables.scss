@@ -1,0 +1,34 @@
+@import "mixins";
+
+$primary: #c9d3b7;
+$secondary: #354463;
+// $primary-darken: map-get($my-app-primary, 900);
+// $accent: mat-color($my-app-accent);
+// $accent-darken: map-get($my-app-accent, 900);
+// $warn: mat-color($my-app-warn);
+
+// Export usefull colors
+$text-color: #414042;
+$extralight-gray: rgba(0, 0, 0, 0.04);
+$light-gray: rgba(0, 0, 0, 0.12);
+$mid-gray: rgba(0, 0, 0, 0.54);
+$overlay: rgba(0, 0, 0, 0.32);
+
+// $link-color: $accent; // set link color based on the used material theme
+// $link-hover-color: currentColor;
+
+// Border radius
+$basic-radius: calculateRem(5px);
+
+// Spacing
+$spacing-xs: calculateRem(4px);
+$spacing-s: calculateRem(8px);
+$spacing-r: calculateRem(12px);
+$spacing-m: calculateRem(16px);
+$spacing-l: calculateRem(24px);
+$spacing-xl: calculateRem(48px);
+$spacing-xxl: calculateRem(96px);
+
+$link-hover-decoration: none;
+
+$basic-border: 1px solid $light-gray;
