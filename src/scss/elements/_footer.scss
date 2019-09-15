@@ -1,0 +1,68 @@
+#main-footer {
+  padding: $spacing-l $spacing-m;
+  .inner-container {
+    @include flexbox($direction: column, $align-items: center);
+    list-style-type: none;
+    @include bp-regular {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .footer-element {
+    &:nth-child(n + 2) {
+      margin: $spacing-m 0 0 0;
+      @include bp-regular {
+        margin: 0;
+      }
+    }
+  }
+  h6 {
+    @include flexbox($direction: column, $align-items: center);
+    font-size: calculateRem(16px);
+    line-height: calculateRem(22px);
+    text-align: center;
+    margin: 0;
+    @include bp-medium {
+      flex-direction: row;
+    }
+    &::before {
+      display: block;
+      content: "";
+      height: calculateRem(18px);
+      width: calculateRem(24px);
+      background-size: auto calculateRem(18px);
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0 0 $spacing-xs 0;
+      @include bp-medium {
+        margin: 0 $spacing-s 0 0;
+      }
+    }
+  }
+  a {
+    color: $text-lightcolor;
+    font-size: calculateRem(12px);
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+    @include bp-medium {
+      margin-left: calculateRem(34px);
+    }
+  }
+  #footer-email h6:before {
+    background-image: url(../images/social-mail-accent.svg);
+  }
+  #footer-phone h6:before {
+    background-image: url(../images/social-phone-accent.svg);
+  }
+  #footer-instagram h6:before {
+    background-image: url(../images/social-instagram-accent.svg);
+  }
+  #footer-facebook h6:before {
+    background-image: url(../images/social-facebook-accent.svg);
+  }
+}
