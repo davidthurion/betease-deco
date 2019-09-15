@@ -22,21 +22,17 @@
     line-height: calculateRem(22px);
     text-align: center;
     margin: 0;
-    @include bp-medium {
-      flex-direction: row;
-    }
-    &::before {
-      display: block;
-      content: "";
-      height: calculateRem(18px);
-      width: calculateRem(24px);
-      background-size: auto calculateRem(18px);
-      background-position: center;
-      background-repeat: no-repeat;
+    i {
+      color: $accent;
+      font-size: calculateRem(17px);
       margin: 0 0 $spacing-xs 0;
       @include bp-medium {
         margin: 0 $spacing-s 0 0;
       }
+    }
+    @include bp-medium {
+      flex-direction: row;
+      align-items: center;
     }
   }
   a {
@@ -50,19 +46,7 @@
       color: $accent;
     }
     @include bp-medium {
-      margin-left: calculateRem(34px);
+      margin-left: calculateRem(28px);
     }
-  }
-  #footer-email h6:before {
-    background-image: url(../images/social-mail-accent.svg);
-  }
-  #footer-phone h6:before {
-    background-image: url(../images/social-phone-accent.svg);
-  }
-  #footer-instagram h6:before {
-    background-image: url(../images/social-instagram-accent.svg);
-  }
-  #footer-facebook h6:before {
-    background-image: url(../images/social-facebook-accent.svg);
   }
 }

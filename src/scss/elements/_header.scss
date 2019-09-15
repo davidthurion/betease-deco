@@ -22,9 +22,8 @@
       color: $primary;
       text-decoration: none;
       padding: $spacing-xs;
-      img {
-        display: block;
-        height: calculateRem(18px);
+      i {
+        font-size: calculateRem(17px);
       }
       &:hover,
       &:focus {
