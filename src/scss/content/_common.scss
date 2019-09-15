@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: $primary;
+  color: white;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+.container {
+  @include bp-extralarge {
+    max-width: calculateRem(1400px);
+    margin: 0 auto;
+  }
+}
+
+.inner-container {
+  @include bp-large {
+    max-width: calculateRem(1200px);
+    margin: 0 auto;
+  }
+}
+
+.accent {
+  color: $accent;
+}
