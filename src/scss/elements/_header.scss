@@ -19,6 +19,10 @@
       color: $primary;
       text-decoration: none;
       padding: $spacing-xs;
+      img {
+        display: block;
+        height: calculateRem(18px);
+      }
       &:hover,
       &:focus {
         color: $accent;
