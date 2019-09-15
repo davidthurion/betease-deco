@@ -1,0 +1,38 @@
+#main-header {
+  background: white;
+  position: fixed;
+  z-index: 666;
+  top: 0;
+  right: 0;
+  left: 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-s $spacing-m;
+  }
+  #complete-logo {
+    display: block;
+    height: calculateRem(80px);
+  }
+  #social-link {
+    display: flex;
+    align-items: center;
+    a {
+      color: $primary;
+      text-decoration: none;
+      padding: $spacing-xs;
+      img {
+        display: block;
+        height: calculateRem(18px);
+      }
+      &:hover,
+      &:focus {
+        color: $accent;
+      }
+      & + a {
+        margin-left: $spacing-r;
+      }
+    }
+  }
+}

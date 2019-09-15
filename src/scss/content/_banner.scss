@@ -1,0 +1,55 @@
+#banner {
+  position: relative;
+  margin-top: calculateRem(100px);
+  padding: $spacing-l $spacing-m;
+  background: url(../images/betease-banner.png);
+  background-size: cover;
+  @include bp-medium {
+    padding: $spacing-xxl $spacing-m;
+  }
+  * {
+    position: relative;
+    z-index: 1;
+  }
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right top, $primary, $accent);
+    opacity: 0.7;
+  }
+  h2,
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  h2 {
+    font-size: calculateRem(46px);
+    line-height: calculateRem(54px);
+    font-weight: 400;
+    @include bp-medium {
+      font-size: calculateRem(56px);
+      line-height: calculateRem(64px);
+    }
+  }
+  h1 {
+    font-family: "Open sans";
+    font-size: calculateRem(18px);
+    line-height: calculateRem(24px);
+    margin: $spacing-s 0 $spacing-r;
+    font-weight: 300;
+    @include bp-medium {
+      font-size: calculateRem(24px);
+      line-height: calculateRem(30px);
+      margin: $spacing-s 0 $spacing-m;
+    }
+  }
+  #video-trigger {
+    display: block;
+    margin: 0 auto;
+  }
+}

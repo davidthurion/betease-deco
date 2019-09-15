@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: $primary;
+  color: white;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}

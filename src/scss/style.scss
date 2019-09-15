@@ -1,0 +1,18 @@
+@import "basics/reset";
+
+// Utilities
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/responsive";
+@import "utilities/animations";
+@import "utilities/buttons";
+
+//Element
+@import "elements/header";
+@import "elements/footer";
+
+//Content
+@import "content/common";
+@import "content/_banner";
+@import "content/_services-list";
+@import "content/_gallery-section";

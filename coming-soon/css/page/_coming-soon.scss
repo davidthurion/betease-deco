@@ -1,0 +1,178 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  @include bp-regular {
+    overflow: auto;
+  }
+}
+.coming-soon {
+  padding: $spacing-m;
+  height: 100%;
+}
+
+#container {
+  text-align: center;
+  @include bp-regular {
+    width: calculateRem(700px);
+    text-align: left;
+    margin: calculateRem(80px) auto 0 auto;
+  }
+}
+
+#logo-link {
+  display: inline-block;
+  margin: $spacing-r 0;
+  img {
+    display: inline-block;
+    height: calculateRem(110px);
+    @include bp-medium {
+      height: calculateRem(140px);
+    }
+  }
+}
+
+#section-container {
+  @include bp-regular {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: calculateRem(700px);
+    position: relative;
+    margin-top: calculateRem(-20px);
+  }
+}
+
+#presentation {
+  position: relative;
+  background: $secondary;
+  margin: $spacing-m auto;
+  padding: $spacing-m;
+  max-width: calculateRem(400px);
+  -webkit-box-shadow: 0px 0px 54px -6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 54px -6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 54px -6px rgba(0, 0, 0, 0.5);
+  @include bp-regular {
+    max-width: inherit;
+    width: calculateRem(400px);
+    padding: $spacing-xl 0 $spacing-xl $spacing-xl;
+    margin: 0;
+  }
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -moz-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.5;
+  }
+  h1 {
+    font-size: calculateRem(36px);
+    line-height: calculateRem(50px);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    @include bp-regular {
+      text-align: left;
+    }
+    @include bp-medium {
+      font-size: alculateRem(44px);
+      line-height: calculateRem(52px);
+    }
+  }
+  #social-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: $spacing-m;
+    padding-top: $spacing-m;
+    position: relative;
+    @include bp-regular {
+      justify-content: flex-start;
+    }
+    &:before {
+      display: block;
+      content: "";
+      width: calculateRem(150px);
+      height: calculateRem(1px);
+      background: $primary;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      @include bp-regular {
+        left: 0;
+        transform: translateX(0);
+      }
+    }
+    li + li {
+      margin-left: $spacing-s;
+    }
+    a {
+      display: inline-block;
+      padding: $spacing-s;
+      .icon-social {
+        fill: white;
+        height: calculateRem(18px);
+      }
+      &:hover {
+        .icon-social {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+
+#video {
+  display: block;
+  position: relative;
+  margin: calculateRem(-70px) -$spacing-m 0 -$spacing-m;
+  position: relative;
+  z-index: -1;
+  @include bp-regular {
+    margin: 0 0 0 calculateRem(-80px);
+  }
+  img {
+    width: 100%;
+    @include bp-small {
+      width: calculateRem(480px);
+    }
+    @include bp-regular {
+      width: auto;
+      height: calculateRem(380px);
+    }
+  }
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: calculateRem(170px);
+    transform: translate(-50%, -50%) rotate(-20deg);
+    color: $secondary;
+    font-size: calculateRem(40px);
+    font-family: "Permanent Marker", cursive;
+    @include bp-regular {
+      top: 100%;
+      left: 100%;
+      transform: translate(-80%, -50%) rotate(-20deg);
+    }
+  }
+}
