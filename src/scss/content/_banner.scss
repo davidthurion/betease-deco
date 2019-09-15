@@ -1,5 +1,6 @@
 #banner {
   position: relative;
+  margin-top: calculateRem(100px);
   padding: $spacing-l $spacing-m;
   background: url(../images/betease-banner.png);
   background-size: cover;
