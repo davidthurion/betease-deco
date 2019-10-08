@@ -1,40 +1,62 @@
 #services-list {
   padding: $spacing-l $spacing-m;
   list-style-type: none;
-  @include bp-small {
-    @include flexbox($direction: column, $align-items: center);
+  @include bp-regular {
+    @include flexbox($direction: column, $justify: center, $align-items: center);
   }
-  @include bp-medium {
-    display: block;
-    position: relative;
-    max-width: calculateRem(900px);
-    margin: 0 auto;
-    height: calculateRem(900px);
+}
+
+.service {
+  @include flexbox($direction: column);
+  &:not(:last-child) {
+    margin: 0 0 $spacing-xxl 0;
   }
-  @include bp-large {
-    max-width: calculateRem(1050px);
-    height: calculateRem(1040px);
+  @include bp-regular {
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
   }
-  .service {
-    @include flexbox($direction: column);
-    @include bp-medium {
-      position: absolute;
+  &-content {
+    @include bp-regular {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      max-width: calculateRem(400px);
+      margin: $spacing-m 0 0 0;
+    }
+    @include bp-large {
+      max-width: calculateRem(500px);
     }
     h3 {
       font-size: calculateRem(26px);
       color: $accent;
       font-weight: 400;
       margin: 0 0 $spacing-s;
-      max-width: calculateRem(380px);
+      text-align: center;
     }
     p {
       font-size: calculateRem(14px);
       line-height: calculateRem(22px);
       font-weight: 300;
       color: $text-color;
-      max-width: calculateRem(380px);
+      text-align: center;
+      @include bp-regular {
+        max-width: calculateRem(420px);
+      }
     }
-    a {
+  }
+  &-visual {
+    margin: $spacing-l 0 0 0;
+    @include bp-regular {
+      width: 50%;
+      max-width: calculateRem(400px);
+
+      @include bp-large {
+        max-width: calculateRem(500px);
+      }
+    }
+    &__trigger {
       display: block;
       box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
       position: relative;
@@ -44,8 +66,13 @@
         content: "";
         position: absolute;
         background: $primary;
+        height: calculateRem(40px);
+        width: calculateRem(1px);
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
-      .service-hover {
+      &__hover {
         position: absolute;
         top: 0;
         right: 0;
@@ -67,134 +94,69 @@
       }
       &:hover,
       &:focus {
-        .service-hover {
+        .service-visual__trigger__hover {
           visibility: visible;
           opacity: 1;
         }
       }
     }
   }
-  #service-decoration-interieur {
-    @include bp-small {
-      align-self: flex-start;
-    }
-    @include bp-medium {
-      right: 0;
-      .content {
-        order: 2;
+}
+
+.service:nth-child(odd) {
+  @include bp-regular {
+    .service-content {
+      align-items: flex-end;
+      h3,
+      p {
+        text-align: right;
       }
     }
-    @include bp-large {
-    }
-    a {
-      margin: $spacing-l 0 0 0;
-      @include bp-small {
-        width: calculateRem(400px);
-      }
-      @include bp-medium {
-        margin: 0 0 $spacing-l 0;
-      }
-      @include bp-large {
-        width: calculateRem(500px);
-      }
-      &:before {
-        height: calculateRem(40px);
-        width: calculateRem(1px);
-        top: 0;
-        left: calculateRem(40px);
-        transform: translateY(-50%);
-        @include bp-medium {
-          top: 100%;
-        }
+    .service-visual {
+      margin: 0 0 0 $spacing-l;
+      &__trigger:before {
+        height: calculateRem(1px);
+        width: calculateRem(40px);
+        top: calculateRem(40px);
+        left: 0;
+        transform: translateX(-50%);
       }
     }
   }
-  #service-aide-achat {
-    align-items: flex-end;
-    margin: $spacing-xxl 0 0 0;
-    @include bp-small {
-      align-self: flex-end;
-    }
-    @include bp-medium {
-      left: 0;
-      top: calculateRem(100px);
-      margin: 0;
-    }
-    @include bp-large {
-    }
-    h3,
-    p {
-      text-align: right;
-    }
-    @include bp-medium {
-      .content {
-        margin-right: calculateRem(60px);
-      }
-    }
-    a {
-      margin: $spacing-l 0 0 0;
-      @include bp-small {
-        width: calculateRem(400px);
-      }
-      @include bp-large {
-        width: calculateRem(450px);
-      }
-      &:before {
-        height: calculateRem(40px);
-        width: calculateRem(1px);
-        top: 0;
-        right: calculateRem(40px);
-        transform: translateY(-50%);
-        @include bp-medium {
-          right: calculateRem(100px);
-        }
+  @include bp-medium {
+    .service-visual {
+      margin: 0 0 0 $spacing-xl;
+      &__trigger:before {
+        top: calculateRem(60px);
       }
     }
   }
-  #service-conseil-shopping {
-    margin: $spacing-xxl 0 0 0;
-    @include bp-small {
-      align-self: flex-start;
-    }
-    @include bp-medium {
-      flex-direction: row;
-      left: 50%;
-      top: calculateRem(580px);
-      transform: translateX(-30%);
-      margin: 0;
-      .content {
-        margin-top: calculateRem(100px);
-        order: 2;
+}
+.service:nth-child(even) {
+  @include bp-regular {
+    .service-content {
+      order: 2;
+      h3,
+      p {
+        text-align: left;
       }
     }
-    @include bp-large {
-      top: calculateRem(640px);
+    .service-visual {
+      margin: 0 $spacing-l 0 0;
+      &__trigger:before {
+        height: calculateRem(1px);
+        width: calculateRem(40px);
+        top: calculateRem(40px);
+        left: 100%;
+        transform: translateX(-50%);
+      }
     }
-    a {
-      margin: $spacing-l 0 0 0;
-      @include bp-small {
-        width: calculateRem(400px);
-      }
-      @include bp-medium {
-        margin: 0 $spacing-l 0 0;
-      }
-      @include bp-large {
-        width: calculateRem(450px);
-      }
-      &:before {
-        height: calculateRem(40px);
-        width: calculateRem(1px);
-        top: 0;
-        left: calculateRem(40px);
-        transform: translateY(-50%);
-        @include bp-medium {
-          height: calculateRem(1px);
-          width: calculateRem(40px);
-          top: calculateRem(140px);
-          left: 100%;
-          transform: translateY(0);
-          transform: translateX(-50%);
-        }
+  }
+  @include bp-medium {
+    .service-visual {
+      margin: 0 $spacing-xl 0 0;
+      &__trigger:before {
+        top: calculateRem(60px);
       }
     }
   }

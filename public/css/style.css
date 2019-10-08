@@ -481,7 +481,7 @@ h6 {
   list-style-type: none;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 667px) {
   #services-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -490,9 +490,9 @@ h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -501,24 +501,7 @@ h6 {
   }
 }
 
-@media screen and (min-width: 992px) {
-  #services-list {
-    display: block;
-    position: relative;
-    max-width: 56.25rem;
-    margin: 0 auto;
-    height: 56.25rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #services-list {
-    max-width: 65.625rem;
-    height: 65rem;
-  }
-}
-
-#services-list .service {
+.service {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,29 +519,87 @@ h6 {
       flex-wrap: nowrap;
 }
 
-@media screen and (min-width: 992px) {
-  #services-list .service {
-    position: absolute;
+.service:not(:last-child) {
+  margin: 0 0 5rem 0;
+}
+
+@media screen and (min-width: 667px) {
+  .service {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
-#services-list .service h3 {
+@media screen and (min-width: 667px) {
+  .service-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+    max-width: 25rem;
+    margin: 1.25rem 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .service-content {
+    max-width: 31.25rem;
+  }
+}
+
+.service-content h3 {
   font-size: 1.625rem;
   color: #c9d3b7;
   font-weight: 400;
   margin: 0 0 0.625rem;
-  max-width: 23.75rem;
+  text-align: center;
 }
 
-#services-list .service p {
+.service-content p {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 300;
   color: #414042;
-  max-width: 23.75rem;
+  text-align: center;
 }
 
-#services-list .service a {
+@media screen and (min-width: 667px) {
+  .service-content p {
+    max-width: 26.25rem;
+  }
+}
+
+.service-visual {
+  margin: 2.5rem 0 0 0;
+}
+
+@media screen and (min-width: 667px) {
+  .service-visual {
+    width: 50%;
+    max-width: 25rem;
+  }
+}
+
+@media screen and (min-width: 667px) and (min-width: 1200px) {
+  .service-visual {
+    max-width: 31.25rem;
+  }
+}
+
+.service-visual__trigger {
   display: block;
   -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
@@ -566,14 +607,20 @@ h6 {
   text-decoration: none;
 }
 
-#services-list .service a:before {
+.service-visual__trigger:before {
   display: block;
   content: "";
   position: absolute;
   background: #354463;
+  height: 2.5rem;
+  width: 0.0625rem;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-#services-list .service a .service-hover {
+.service-visual__trigger__hover {
   position: absolute;
   top: 0;
   right: 0;
@@ -601,218 +648,82 @@ h6 {
   transition: 0.4s all ease-in-out;
 }
 
-#services-list .service a .service-hover i {
+.service-visual__trigger__hover i {
   font-size: 2.25rem;
   color: white;
 }
 
-#services-list .service a img {
+.service-visual__trigger img {
   display: block;
   width: 100%;
 }
 
-#services-list .service a:hover .service-hover, #services-list .service a:focus .service-hover {
+.service-visual__trigger:hover .service-visual__trigger__hover, .service-visual__trigger:focus .service-visual__trigger__hover {
   visibility: visible;
   opacity: 1;
 }
 
-@media screen and (min-width: 576px) {
-  #services-list #service-decoration-interieur {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+@media screen and (min-width: 667px) {
+  .service:nth-child(odd) .service-content {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
-}
-
-@media screen and (min-width: 992px) {
-  #services-list #service-decoration-interieur {
-    right: 0;
+  .service:nth-child(odd) .service-content h3,
+  .service:nth-child(odd) .service-content p {
+    text-align: right;
   }
-  #services-list #service-decoration-interieur .content {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+  .service:nth-child(odd) .service-visual {
+    margin: 0 0 0 2.5rem;
   }
-}
-
-#services-list #service-decoration-interieur a {
-  margin: 2.5rem 0 0 0;
-}
-
-@media screen and (min-width: 576px) {
-  #services-list #service-decoration-interieur a {
-    width: 25rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  #services-list #service-decoration-interieur a {
-    margin: 0 0 2.5rem 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #services-list #service-decoration-interieur a {
-    width: 31.25rem;
-  }
-}
-
-#services-list #service-decoration-interieur a:before {
-  height: 2.5rem;
-  width: 0.0625rem;
-  top: 0;
-  left: 2.5rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-@media screen and (min-width: 992px) {
-  #services-list #service-decoration-interieur a:before {
-    top: 100%;
-  }
-}
-
-#services-list #service-aide-achat {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin: 5rem 0 0 0;
-}
-
-@media screen and (min-width: 576px) {
-  #services-list #service-aide-achat {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  #services-list #service-aide-achat {
-    left: 0;
-    top: 6.25rem;
-    margin: 0;
-  }
-}
-
-#services-list #service-aide-achat h3,
-#services-list #service-aide-achat p {
-  text-align: right;
-}
-
-@media screen and (min-width: 992px) {
-  #services-list #service-aide-achat .content {
-    margin-right: 3.75rem;
-  }
-}
-
-#services-list #service-aide-achat a {
-  margin: 2.5rem 0 0 0;
-}
-
-@media screen and (min-width: 576px) {
-  #services-list #service-aide-achat a {
-    width: 25rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #services-list #service-aide-achat a {
-    width: 28.125rem;
-  }
-}
-
-#services-list #service-aide-achat a:before {
-  height: 2.5rem;
-  width: 0.0625rem;
-  top: 0;
-  right: 2.5rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-@media screen and (min-width: 992px) {
-  #services-list #service-aide-achat a:before {
-    right: 6.25rem;
-  }
-}
-
-#services-list #service-conseil-shopping {
-  margin: 5rem 0 0 0;
-}
-
-@media screen and (min-width: 576px) {
-  #services-list #service-conseil-shopping {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  #services-list #service-conseil-shopping {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    left: 50%;
-    top: 36.25rem;
-    -webkit-transform: translateX(-30%);
-            transform: translateX(-30%);
-    margin: 0;
-  }
-  #services-list #service-conseil-shopping .content {
-    margin-top: 6.25rem;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #services-list #service-conseil-shopping {
-    top: 40rem;
-  }
-}
-
-#services-list #service-conseil-shopping a {
-  margin: 2.5rem 0 0 0;
-}
-
-@media screen and (min-width: 576px) {
-  #services-list #service-conseil-shopping a {
-    width: 25rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  #services-list #service-conseil-shopping a {
-    margin: 0 2.5rem 0 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #services-list #service-conseil-shopping a {
-    width: 28.125rem;
-  }
-}
-
-#services-list #service-conseil-shopping a:before {
-  height: 2.5rem;
-  width: 0.0625rem;
-  top: 0;
-  left: 2.5rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-@media screen and (min-width: 992px) {
-  #services-list #service-conseil-shopping a:before {
+  .service:nth-child(odd) .service-visual__trigger:before {
     height: 0.0625rem;
     width: 2.5rem;
-    top: 8.75rem;
-    left: 100%;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    top: 2.5rem;
+    left: 0;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .service:nth-child(odd) .service-visual {
+    margin: 0 0 0 3.75rem;
+  }
+  .service:nth-child(odd) .service-visual__trigger:before {
+    top: 3.75rem;
+  }
+}
+
+@media screen and (min-width: 667px) {
+  .service:nth-child(even) .service-content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .service:nth-child(even) .service-content h3,
+  .service:nth-child(even) .service-content p {
+    text-align: left;
+  }
+  .service:nth-child(even) .service-visual {
+    margin: 0 2.5rem 0 0;
+  }
+  .service:nth-child(even) .service-visual__trigger:before {
+    height: 0.0625rem;
+    width: 2.5rem;
+    top: 2.5rem;
+    left: 100%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .service:nth-child(even) .service-visual {
+    margin: 0 3.75rem 0 0;
+  }
+  .service:nth-child(even) .service-visual__trigger:before {
+    top: 3.75rem;
   }
 }
 
