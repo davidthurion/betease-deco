@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="icofont/icofont.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
@@ -59,9 +60,16 @@
             on trouve des solutions et on laisse la magie opérer.
           </p>
         </div>
-        <picture>
+        <a
+          data-fancybox="gallery"
+          data-caption="Décoration d'intérieur"
+          href="images/services-decoration-interieur.png"
+        >
+          <span class="service-hover">
+            <i class="icofont-heart-eyes"></i>
+          </span>
           <img src="images/services-decoration-interieur.png" alt="" />
-        </picture>
+        </a>
       </li>
       <li class="service" id="service-aide-achat">
         <div class="content">
@@ -72,9 +80,12 @@
             interieur avec des aménagements simples, jolis et efficaces.
           </p>
         </div>
-        <picture>
+        <a data-fancybox="gallery" data-caption="Aide à l'achat" href="images/services-aide-achat.png">
+          <span class="service-hover">
+            <i class="icofont-heart-eyes"></i>
+          </span>
           <img src="images/services-aide-achat.png" alt="" />
-        </picture>
+        </a>
       </li>
       <li class="service" id="service-conseil-shopping">
         <div class="content">
@@ -84,14 +95,16 @@
             tout ! Gain de temps et décoration aux petits oignons.
           </p>
         </div>
-        <picture>
+        <a data-fancybox="gallery" data-caption="Conseil shopping" href="images/services-conseil-shopping.png">
+          <span class="service-hover">
+            <i class="icofont-heart-eyes"></i>
+          </span>
           <img src="images/services-conseil-shopping.png" alt="" />
-        </picture>
+        </a>
       </li>
     </ul>
     <section id="gallery-section">
       <header class="inner-container">
-        <h4>BeTease</h4>
         <h3>
           Pour ceux qui veulent un <span class="accent">interieur personnalisé</span>,
           <span class="accent">sans se ruiner</span> ! Ou presque…
@@ -138,6 +151,7 @@
       </ul>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="js/all.js"></script>
   </body>
 </html>
