@@ -1,8 +1,9 @@
 #services-list {
-  padding: $spacing-l $spacing-m;
+  padding: $spacing-xl $spacing-m;
   list-style-type: none;
   @include bp-regular {
     @include flexbox($direction: column, $justify: center, $align-items: center);
+    padding: $spacing-xxl $spacing-m;
   }
 }
 
