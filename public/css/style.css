@@ -779,19 +779,113 @@ h6 {
   }
 }
 
-#gallery-container picture {
-  display: block;
-  width: 100%;
-  height: 12.5rem;
+#gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 25rem;
 }
 
-#gallery-container picture img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  width: 100%;
+#gallery .gallery-visual__trigger {
+  display: block;
+  position: relative;
   overflow: hidden;
+}
+
+#gallery .gallery-visual__trigger:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 1 / 3 / 3;
+  background: url(../images/gallery-picture-01.png);
+  background-size: cover;
+}
+
+#gallery .gallery-visual__trigger:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 3 / 2 / 5;
+  background: url(../images/gallery-picture-02.png);
+  background-size: cover;
+}
+
+#gallery .gallery-visual__trigger:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 5 / 2 / 6;
+  background: url(../images/gallery-picture-03.png);
+  background-size: cover;
+}
+
+#gallery .gallery-visual__trigger:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 3 / 3 / 4;
+  background: url(../images/gallery-picture-04.png);
+  background-size: cover;
+}
+
+#gallery .gallery-visual__trigger:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 4 / 3 / 6;
+  background: url(../images/gallery-picture-05.png);
+  background-size: cover;
+}
+
+#gallery .gallery-visual__trigger img {
+  display: none;
+}
+
+#gallery .gallery-visual__trigger__hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(53, 68, 99, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+
+#gallery .gallery-visual__trigger__hover i {
+  font-size: 2.25rem;
+  color: white;
+}
+
+#gallery .gallery-visual__trigger:hover .gallery-visual__trigger__hover, #gallery .gallery-visual__trigger:focus .gallery-visual__trigger__hover {
+  visibility: visible;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
