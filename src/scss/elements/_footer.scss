@@ -1,6 +1,6 @@
 #main-footer {
   padding: $spacing-l $spacing-m;
-  .inner-container {
+  .container {
     @include flexbox($direction: column, $align-items: center);
     list-style-type: none;
     margin: $neg-spacing-s;

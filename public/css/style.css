@@ -177,10 +177,10 @@ video {
 .btn-accent {
   font-size: 1rem;
   font-family: "Playfair Display", serif;
-  padding: calculateRem(10px) calculateRem(20px);
+  padding: 0.625rem 1.25rem;
   background: #c9d3b7;
   border: none;
-  border-radius: calculateRem(5px) 0 calculateRem(5px) 0;
+  border-radius: 0.3125rem 0 0.3125rem 0;
   color: white;
   text-decoration: none;
 }
@@ -209,7 +209,7 @@ video {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: calculateRem(10px) calculateRem(20px);
+  padding: 0.625rem 1.25rem;
 }
 
 #main-header #complete-logo {
@@ -229,11 +229,11 @@ video {
 #main-header #social-link a {
   color: #354463;
   text-decoration: none;
-  padding: calculateRem(5px);
+  padding: 0.3125rem;
 }
 
 #main-header #social-link a i {
-  font-size: 1.0625rem;
+  font-size: 1.25rem;
 }
 
 #main-header #social-link a:hover, #main-header #social-link a:focus {
@@ -241,7 +241,7 @@ video {
 }
 
 #main-header #social-link a + a {
-  margin-left: calculateRem(15px);
+  margin-left: 0.9375rem;
 }
 
 #dialog-email {
@@ -249,10 +249,10 @@ video {
 }
 
 #main-footer {
-  padding: calculateRem(40px) calculateRem(20px);
+  padding: 2.5rem 1.25rem;
 }
 
-#main-footer .inner-container {
+#main-footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,11 +269,11 @@ video {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   list-style-type: none;
-  margin: -calculateRem(10px);
+  margin: -0.625rem;
 }
 
 @media screen and (min-width: 667px) {
-  #main-footer .inner-container {
+  #main-footer .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -285,13 +285,13 @@ video {
 }
 
 @media screen and (min-width: 1400px) {
-  #main-footer .inner-container {
-    margin: -calculateRem(10px) auto;
+  #main-footer .container {
+    margin: -0.625rem auto;
   }
 }
 
 #main-footer .footer-element {
-  margin: calculateRem(10px);
+  margin: 0.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,7 +345,7 @@ video {
 #main-footer h6 i {
   color: #c9d3b7;
   font-size: 1.0625rem;
-  margin: 0 calculateRem(10px) 0 0;
+  margin: 0 0.625rem 0 0;
 }
 
 #main-footer a {
@@ -353,7 +353,7 @@ video {
   font-size: 0.75rem;
   text-decoration: none;
   font-weight: 300;
-  margin: 0.125rem 0 0 calculateRem(10px);
+  margin: 0.125rem 0 0 0.625rem;
 }
 
 @media screen and (min-width: 667px) {
@@ -416,14 +416,14 @@ h6 {
 #banner {
   position: relative;
   margin-top: 6.25rem;
-  padding: calculateRem(40px) calculateRem(20px);
+  padding: 2.5rem 1.25rem;
   background: url(../images/betease-banner.png);
   background-size: cover;
 }
 
 @media screen and (min-width: 992px) {
   #banner {
-    padding: calculateRem(80px) calculateRem(20px);
+    padding: 5rem 1.25rem;
   }
 }
 
@@ -468,7 +468,7 @@ h6 {
   font-family: "Open sans";
   font-size: 1.125rem;
   line-height: 1.5rem;
-  margin: calculateRem(10px) 0 calculateRem(15px);
+  margin: 0.625rem 0 0.9375rem;
   font-weight: 300;
 }
 
@@ -476,7 +476,7 @@ h6 {
   #banner h1 {
     font-size: 1.5rem;
     line-height: 1.875rem;
-    margin: calculateRem(10px) 0 calculateRem(20px);
+    margin: 0.625rem 0 1.25rem;
   }
 }
 
@@ -486,7 +486,7 @@ h6 {
 }
 
 #services-list {
-  padding: calculateRem(60px) calculateRem(20px);
+  padding: 3.75rem 1.25rem;
   list-style-type: none;
 }
 
@@ -507,7 +507,7 @@ h6 {
             align-items: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    padding: calculateRem(80px) calculateRem(20px);
+    padding: 5rem 1.25rem;
   }
 }
 
@@ -530,7 +530,7 @@ h6 {
 }
 
 .service:not(:last-child) {
-  margin: 0 0 calculateRem(80px) 0;
+  margin: 0 0 5rem 0;
 }
 
 @media screen and (min-width: 667px) {
@@ -560,7 +560,7 @@ h6 {
             flex-direction: column;
     width: 50%;
     max-width: 25rem;
-    margin: calculateRem(20px) 0 0 0;
+    margin: 1.25rem 0 0 0;
   }
 }
 
@@ -574,7 +574,7 @@ h6 {
   font-size: 1.625rem;
   color: #c9d3b7;
   font-weight: 400;
-  margin: 0 0 calculateRem(10px);
+  margin: 0 0 0.625rem;
   text-align: center;
 }
 
@@ -593,7 +593,7 @@ h6 {
 }
 
 .service-visual {
-  margin: calculateRem(40px) 0 0 0;
+  margin: 2.5rem 0 0 0;
 }
 
 @media screen and (min-width: 667px) {
@@ -684,7 +684,7 @@ h6 {
     text-align: right;
   }
   .service:nth-child(odd) .service-visual {
-    margin: 0 0 0 calculateRem(40px);
+    margin: 0 0 0 2.5rem;
   }
   .service:nth-child(odd) .service-visual__trigger:before {
     height: 0.0625rem;
@@ -698,7 +698,7 @@ h6 {
 
 @media screen and (min-width: 992px) {
   .service:nth-child(odd) .service-visual {
-    margin: 0 0 0 calculateRem(60px);
+    margin: 0 0 0 3.75rem;
   }
   .service:nth-child(odd) .service-visual__trigger:before {
     top: 3.75rem;
@@ -716,7 +716,7 @@ h6 {
     text-align: left;
   }
   .service:nth-child(even) .service-visual {
-    margin: 0 calculateRem(40px) 0 0;
+    margin: 0 2.5rem 0 0;
   }
   .service:nth-child(even) .service-visual__trigger:before {
     height: 0.0625rem;
@@ -730,7 +730,7 @@ h6 {
 
 @media screen and (min-width: 992px) {
   .service:nth-child(even) .service-visual {
-    margin: 0 calculateRem(60px) 0 0;
+    margin: 0 3.75rem 0 0;
   }
   .service:nth-child(even) .service-visual__trigger:before {
     top: 3.75rem;
@@ -755,7 +755,7 @@ h6 {
 }
 
 #gallery-section header {
-  padding: calculateRem(40px) calculateRem(20px);
+  padding: 2.5rem 1.25rem;
 }
 
 #gallery-section header h4,
