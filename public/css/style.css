@@ -212,8 +212,12 @@ video {
   padding: 0.625rem 1.25rem;
 }
 
-#main-header #complete-logo {
+#main-header #header-logo a,
+#main-header #header-logo img {
   display: block;
+}
+
+#main-header #header-logo img {
   height: 5rem;
 }
 
