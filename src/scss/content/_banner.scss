@@ -37,11 +37,40 @@
     }
   }
   h1 {
+    @include flexbox($direction: column);
     font-family: "Open sans";
     font-size: calculateRem(18px);
     line-height: calculateRem(24px);
     margin: $spacing-s 0 $spacing-r;
     font-weight: 300;
+    @include bp-regular {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    span:not(:first-child) {
+      @include flexbox($direction: column);
+      @include bp-regular {
+        flex-direction: row;
+        align-items: center;
+      }
+      &:before {
+        display: block;
+        content: "";
+        width: calculateRem(20px);
+        height: calculateRem(1px);
+        background: $accent;
+        margin: $spacing-xs auto;
+        @include bp-regular {
+          width: calculateRem(1px);
+          height: calculateRem(20px);
+          margin: 0 $spacing-s;
+        }
+        @include bp-medium {
+          margin: 0 $spacing-r;
+        }
+      }
+    }
     @include bp-medium {
       font-size: calculateRem(24px);
       line-height: calculateRem(30px);
