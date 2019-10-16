@@ -2,9 +2,10 @@
   "name": "betease",
   "version": "1.0.0",
   "description": "",
-  "main": "public/js/all.js",
+  "main": "src/js/all.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "steal-tools"
   },
   "author": "",
   "license": "ISC",

@@ -3,7 +3,12 @@
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "public/css"
+      "savePath": "dist/css"
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/dist/css"
     }
   ]
 }
