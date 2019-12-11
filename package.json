@@ -11,9 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.0.0",
-    "steal": "^0.16.45"
+    "steal": "^1.12.6"
   },
   "devDependencies": {
-    "steal-tools": "^2.2.2"
+    "steal-tools": "^1.11.10"
   }
 }
