@@ -11,10 +11,19 @@
     align-items: center;
     padding: $spacing-s $spacing-m;
   }
-  #complete-logo {
-    display: block;
-    height: calculateRem(80px);
+  #header-logo {
+    a,
+    img {
+      display: block;
+    }
+    img {
+      height: calculateRem(80px);
+    }
   }
+  // #complete-logo {
+  //   display: block;
+  //   height: calculateRem(80px);
+  // }
   #social-link {
     display: flex;
     align-items: center;
@@ -23,7 +32,7 @@
       text-decoration: none;
       padding: $spacing-xs;
       i {
-        font-size: calculateRem(17px);
+        font-size: calculateRem(20px);
       }
       &:hover,
       &:focus {

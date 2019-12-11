@@ -1,14 +1,15 @@
 @import "basics/reset";
 
 // Utilities
-@import "utilities/variables";
 @import "utilities/mixins";
+@import "utilities/variables";
 @import "utilities/responsive";
 @import "utilities/animations";
 @import "utilities/buttons";
 
 //Element
 @import "elements/header";
+@import "elements/dialog-email";
 @import "elements/footer";
 
 //Content

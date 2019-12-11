@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136616401-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-136616401-1');
+    </script>
     <meta charset="utf-8" />
-    <meta name="description" content="Betease - Un site de déco qui fait chaud dans ton coeur." />
+    <meta
+      name="description"
+      content="Votre intérieur de rêve avec Betease. Aide à l'achat | Décoration d'intérieur | Conseil shopping"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Betease - Un site de déco qui fait chaud dans ton coeur.</title>
+    <title>Betease - Pour ceux qui veulent un interieur personnalisé, sans se ruiner ! Ou presque…</title>
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Playfair+Display:400,400i,700,700i|Permanent+Marker"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="icofont/icofont.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
@@ -19,10 +34,14 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
   </head>
-  <body>
+  <body id="betease-home">
     <header id="main-header">
       <div class="container">
-        <img src="images/betease-white-rgb.svg" id="complete-logo" alt="" />
+        <h1 id="header-logo">
+          <a href="http://betease.be">
+            <img src="images/betease-white-rgb.svg" alt="Betease - Deco & More" />
+          </a>
+        </h1>
         <div id="social-link">
           <a href="mailto:cestpasmoi@betease-deco.be" title="cestpasmoi@betease-deco.be">
             <i class="icofont-ui-email"></i>
@@ -45,26 +64,37 @@
     <section id="banner">
       <h2>Votre intérieur de rêve avec Betease</h2>
       <h1>
-        Aide à l'achat <span class="accent">|</span> Décoration d'intérieur <span class="accent">|</span> Conseil
-        shopping
+        <span>Aide à l'achat</span>
+        <span>Décoration d'intérieur</span>
+        <span>Conseil shopping</span>
       </h1>
       <!-- <button id="video-trigger" class="btn-accent">Voir la video</button> -->
     </section>
     <ul id="services-list" class="container">
       <li class="service" id="service-decoration-interieur">
-        <div class="content">
+        <div class="service-content">
           <h3>Décoration d'intérieur</h3>
           <p>
             Vous avez envie de changer votre interieur, de le personnaliser ? Même avec un budget limité, pas de soucis
             on trouve des solutions et on laisse la magie opérer.
           </p>
         </div>
-        <picture>
-          <img src="images/services-decoration-interieur.png" alt="" />
-        </picture>
+        <div class="service-visual">
+          <a
+            class="service-visual__trigger"
+            data-fancybox="services"
+            data-caption="Décoration d'intérieur"
+            href="images/services-decoration-interieur.png"
+          >
+            <span class="service-visual__trigger__hover">
+              <i class="icofont-heart-eyes"></i>
+            </span>
+            <img src="images/services-decoration-interieur.png" alt="" />
+          </a>
+        </div>
       </li>
       <li class="service" id="service-aide-achat">
-        <div class="content">
+        <div class="service-content">
           <h3>Aide à l'achat</h3>
           <p>
             Vous cherchez à acheter un bien et vous avez du mal à vous projeter ? Vous n’avez pas une enveloppe
@@ -72,41 +102,85 @@
             interieur avec des aménagements simples, jolis et efficaces.
           </p>
         </div>
-        <picture>
-          <img src="images/services-aide-achat.png" alt="" />
-        </picture>
+        <div class="service-visual">
+          <a
+            class="service-visual__trigger"
+            data-fancybox="services"
+            data-caption="Aide à l'achat"
+            href="images/services-aide-achat.png"
+          >
+            <span class="service-visual__trigger__hover">
+              <i class="icofont-heart-eyes"></i>
+            </span>
+            <img src="images/services-aide-achat.png" alt="" />
+          </a>
+        </div>
       </li>
       <li class="service" id="service-conseil-shopping">
-        <div class="content">
+        <div class="service-content">
           <h3>Conseil shopping</h3>
           <p>
             Vous voulez acheter de la décoration, mais le shopping ca vous ennuie ? Pas de soucis, Betease se charge de
             tout ! Gain de temps et décoration aux petits oignons.
           </p>
         </div>
-        <picture>
-          <img src="images/services-conseil-shopping.png" alt="" />
-        </picture>
+        <div class="service-visual">
+          <a
+            class="service-visual__trigger"
+            data-fancybox="services"
+            data-caption="Conseil shopping"
+            href="images/services-conseil-shopping.png"
+          >
+            <span class="service-visual__trigger__hover">
+              <i class="icofont-heart-eyes"></i>
+            </span>
+            <img src="images/services-conseil-shopping.png" alt="" />
+          </a>
+        </div>
       </li>
     </ul>
     <section id="gallery-section">
       <header class="inner-container">
-        <h4>BeTease</h4>
         <h3>
           Pour ceux qui veulent un <span class="accent">interieur personnalisé</span>,
           <span class="accent">sans se ruiner</span> ! Ou presque…
         </h3>
       </header>
-      <!-- <div id="gallery-container">
-        <picture><img src="images/gallery-picture-01.png" alt=""/></picture>
-        <picture><img src="images/gallery-picture-02.png" alt=""/></picture>
-        <picture><img src="images/gallery-picture-03.png" alt=""/></picture>
-        <picture><img src="images/gallery-picture-04.png" alt=""/></picture>
-        <picture><img src="images/gallery-picture-05.png" alt=""/></picture>
-      </div> -->
+      <div id="gallery">
+        <a class="gallery-visual__trigger" data-fancybox="gallery" href="images/gallery-picture-01.png">
+          <span class="gallery-visual__trigger__hover">
+            <i class="icofont-heart-eyes"></i>
+          </span>
+          <img src="images/gallery-picture-01.png" alt="" />
+        </a>
+        <a class="gallery-visual__trigger" data-fancybox="gallery" href="images/gallery-picture-02.png">
+          <span class="gallery-visual__trigger__hover">
+            <i class="icofont-heart-eyes"></i>
+          </span>
+          <img src="images/gallery-picture-02.png" alt="" />
+        </a>
+        <a class="gallery-visual__trigger" data-fancybox="gallery" href="images/gallery-picture-03.png">
+          <span class="gallery-visual__trigger__hover">
+            <i class="icofont-heart-eyes"></i>
+          </span>
+          <img src="images/gallery-picture-03.png" alt="" />
+        </a>
+        <a class="gallery-visual__trigger" data-fancybox="gallery" href="images/gallery-picture-04.png">
+          <span class="gallery-visual__trigger__hover">
+            <i class="icofont-heart-eyes"></i>
+          </span>
+          <img src="images/gallery-picture-04.png" alt="" />
+        </a>
+        <a class="gallery-visual__trigger" data-fancybox="gallery" href="images/gallery-picture-05.png">
+          <span class="gallery-visual__trigger__hover">
+            <i class="icofont-heart-eyes"></i>
+          </span>
+          <img src="images/gallery-picture-05.png" alt="" />
+        </a>
+      </div>
     </section>
     <footer id="main-footer">
-      <ul class="inner-container">
+      <ul class="container">
         <li class="footer-element" id="footer-email">
           <h6>
             <i class="icofont-ui-email"></i>
@@ -137,7 +211,6 @@
         </li>
       </ul>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/all.js"></script>
+    <script src="../node_modules/steal/steal.production.js"></script>
   </body>
 </html>

@@ -1,31 +1,19 @@
 {
-  "name": "notarywebsite",
+  "name": "betease",
   "version": "1.0.0",
-  "description": "## GULP",
-  "main": "gulpfile.js",
+  "description": "",
+  "main": "src/js/all.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "steal-tools"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "autoprefixer": "^9.6.0",
-    "concat": "^1.0.3",
-    "cssnano": "^4.1.10",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^6.0.0",
-    "gulp-newer": "^1.4.0",
-    "gulp-noop": "^1.0.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-size": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2",
-    "postcss-assets": "^5.0.0",
-    "usedcss": "^1.0.7"
+    "jquery": "^3.0.0",
+    "steal": "^0.16.45"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7"
+    "steal-tools": "^2.2.2"
   }
 }
